@@ -1,0 +1,57 @@
+-------------------------------------------------------------------------------
+Test set: E2e_tests.ProjectPageTests
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 31.98 s <<< FAILURE! -- in E2e_tests.ProjectPageTests
+E2e_tests.ProjectPageTests.secondTest -- Time elapsed: 10.38 s <<< FAILURE!
+Element not found {#search}
+Expected: visible
+Screenshot: file:/Users/tarasboichenko/IdeaProjects/e2e_tests/build/reports/tests/1765973560589.0.png
+Page source: file:/Users/tarasboichenko/IdeaProjects/e2e_tests/build/reports/tests/1765973560589.0.html
+Timeout: 10 s.
+Caused by: NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#search"}
+	at com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:90)
+	at com.codeborne.selenide.impl.ElementFinder.createElementNotFoundError(ElementFinder.java:142)
+	at com.codeborne.selenide.impl.WebElementSource.handleError(WebElementSource.java:142)
+	at com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:126)
+	at com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:103)
+	at com.codeborne.selenide.commands.Should.execute(Should.java:30)
+	at com.codeborne.selenide.commands.Should.execute(Should.java:14)
+	at com.codeborne.selenide.commands.Commands.execute(Commands.java:162)
+	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:134)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy10.shouldBe(Unknown Source)
+	at E2e_tests.ProjectPageTests.searchForProject(ProjectPageTests.java:62)
+	at E2e_tests.ProjectPageTests.secondTest(ProjectPageTests.java:70)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#search"}
+  (Session info: chrome=143.0.7499.146)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d924aab438f30b40ee4735a8433e9b9a, findElement {value=#search, using=css selector}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 143.0.7499.146, chrome: {chromedriverVersion: 143.0.7499.146 (c1224fc40c9..., userDataDir: /var/folders/xl/c7v2z1rn71n...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60807}, goog:processID: 65644, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:60807/devtoo..., se:cdpVersion: 143.0.7499.146, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d924aab438f30b40ee4735a8433e9b9a
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:73)
+	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:46)
+	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:35)
+	at com.codeborne.selenide.impl.ElementFinder.getWebElement(ElementFinder.java:122)
+	at com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:115)
+	... 12 more
+

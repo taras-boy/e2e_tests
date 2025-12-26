@@ -1,0 +1,1553 @@
+<html lang="en" class="light"><head><style type="text/css">.turbo-progress-bar {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: #0076ff;
+  z-index: 2147483647;
+  transition:
+    width 300ms ease-out,
+    opacity 150ms 150ms ease-in;
+  transform: translate3d(0, 0, 0);
+}
+</style>
+    <meta charset="utf-8">
+    <!-- Uncomment to make IE8 render like IE7 -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Testomat.io</title>
+    <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="1NQGdW8pobvh84vkGC4HXxFtTAulh1RXH6up7gI4wqCFXqDO1koc3sbjAEcTbwcp-N8P7igaMQ5d3XP_U1SuAA">
+    
+
+<!-- Compressed Foundation JavaScript -->
+
+<link href="/images/logo/icons/favicon.svg" rel="apple-touch-icon" sizes="152x152">
+<link href="/images/logo/icons/favicon.svg" rel="apple-touch-icon" sizes="167x167">
+<link href="/images/logo/icons/favicon.svg" rel="apple-touch-icon" sizes="180x180">
+<link href="/images/logo/icons/favicon.svg" rel="icon" sizes="192x192">
+<link href="/images/logo/icons/128x128.png" rel="icon" sizes="128x128">
+
+      <!-- Google Tag Manager -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-RFPGYXTLMK&amp;cx=c&amp;gtm=4e5ca1"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-30075781-7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){window.dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-30075781-7');
+    </script>
+
+  <!-- End Google Tag Manager -->
+
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="/assets/application-da4b4247cc1ce4085fc7f51f621f3284812362facc933b4a40532014b10f36c0.css">
+    <script src="/assets/head-4202352413cb4f1634dd9471a056c08050c0e10474389826f1ac082df4440111.js"></script>
+
+
+
+    <style>
+@keyframes spin{to{transform:rotate(360deg)}}.loader{animation:spin 2s infinite linear;zoom:.5;border:solid 1.5vmin transparent;border-radius:50%;border-color:#3730a3 #3730a3 transparent transparent;box-sizing:border-box;height:10vmin;left:calc(50% - 10vmin);position:fixed;top:calc(50% - 10vmin);width:10vmin;z-index:1}
+</style>
+
+        <script type="text/javascript">
+      window.$crisp = [];
+      window.CRISP_WEBSITE_ID = "4192ab4e-8b76-4b7e-a8c4-ea66dea249e7";
+      (function() {
+        d = document;
+        s = d.createElement("script");
+        s.src = "https://client.crisp.chat/l.js";
+        s.async = 1;
+        d.getElementsByTagName("head")[0].appendChild(s);
+      })();
+    </script><script src="https://client.crisp.chat/l.js" async=""></script>
+
+  <link href="https://client.relay.crisp.chat" rel="dns-prefetch" crossorigin=""><link href="https://client.crisp.chat" rel="preconnect" crossorigin=""><script src="https://client.crisp.chat/static/javascripts/client_default_6e324a8.js" type="module" async=""></script><link href="https://client.crisp.chat/static/stylesheets/client_default_6e324a8.css" type="text/css" rel="stylesheet"></head>
+
+  <body data-turbo-suppress-warning="true">
+      <div id="content-mobile" class="user">
+      </div>
+
+      <div id="content-desktop" class="user">
+          <div class="auth-header-nav">
+            <div class="auth-header-nav-left">
+              <div class="auth-header-nav-left-logo">
+                <a href="/">
+                </a>
+              </div>
+              <div class="auth-header-nav-left-items">
+                <a href="/" class="current">
+                  Dashboard
+                </a>
+                  <a href="/companies" class="">
+                    Companies
+                  </a>
+                <div class="auth-header-nav-right-dropdown" x-data="{}">
+                  <div class="auth-header-nav-left-dropdown-toggle " @click="() =&gt; showDropdownMenu($event)" id="analytics-dropdown-toggle">
+                    <span>Analytics</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <div class="auth-header-nav-left-dropdown-menu hidden" id="analytics-dropdown-menu" @click.outside="(e) =&gt; hideDropdownMenu(e)">
+                    <a href="/analytics" class="">
+                      Analytics
+                    </a>
+                    <a href="/analytics/dashboards" class="" style="display:flex;">
+                      Dashboards
+                      <div class="leading-none rounded-md bg-blue-400 py-0.5 px-2 border border-transparent text-xsm text-white transition-all shadow-xsm width-auto ml-2 lh-1">
+                        beta
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <a href="https://docs.testomat.io">
+                  <span>Docs</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
+                    <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
+                  </svg>
+                </a>
+                <a href="https://changelog.testomat.io">
+                  <span>Changelog</span>
+                  <span id="ghost-status" class="hidden">
+                    <span class="flex h-1.5 w-1.5 ml-1 mb-2">
+                      <span class="animate-ping absolute inline-flex h-1.5 w-1.5 rounded-full bg-indigo-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-indigo-500"></span>
+                    </span>
+                  </span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
+                    <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
+                  </svg>
+                </a>
+                  <a href="/docs/openapi">
+                    <span>Public API</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
+                      <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
+                    </svg>
+                  </a>
+              </div>
+            </div>
+            <div class="auth-header-nav-right">
+
+              
+
+              <a class="auth-header-nav-right-icon-button" href="/projects/new">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path>
+                </svg>
+</a>
+              <button id="showGlobalSearchBtn" class="auth-header-nav-right-icon-button" x-data="{}" @click="() =&gt; showGlobalSearchOnBtn($event)">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2h-1.528A6 6 0 004 9.528V4z"></path>
+                  <path fill-rule="evenodd" d="M8 10a4 4 0 00-3.446 6.032l-1.261 1.26a1 1 0 101.414 1.415l1.261-1.261A4 4 0 108 10zm-2 4a2 2 0 114 0 2 2 0 01-4 0z" clip-rule="evenodd"></path>
+                </svg>
+              </button>
+
+              <div class="auth-header-nav-right-dropdown" x-data="">
+                <div id="toggle-profile-menu" class="auth-header-nav-right-dropdown-avatar" @click="(e) =&gt; showDropdownMenu(e)">
+                  <button type="button" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                    <img height="30" width="30" class="" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMVpRR3c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--c3d0081c806419113992ebb64eb363267cbcbbce/user_avatar_32877.png">
+                  </button>
+                </div>
+
+                <div id="profile-menu" class="auth-header-nav-right-dropdown-menu hidden" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1" @click.outside="(e) =&gt; hideDropdownMenu(e)">
+                  <div class="auth-header-nav-right-dropdown-menu-block">
+                    <div class="auth-header-nav-right-dropdown-menu-block-signed-as">
+                      Signed in as
+                    </div>
+                    <div class="auth-header-nav-right-dropdown-menu-block-email">
+                      taras.aceboy@gmail.com
+                    </div>
+                  </div>
+                  <div class="auth-header-nav-right-dropdown-menu-block">
+                      <a href="/companies">My Companies</a>
+
+                    <div class="auth-header-nav-right-dropdown-menu-block-account">
+                      <a href="/account">Account</a>
+
+                    </div>
+                    <div>
+                      <a href="/account/files" class="">Downloads</a>
+                    </div>
+                  </div>
+                    <div class="auth-header-nav-right-dropdown-menu-block">
+                      <a class="font-semibold text-indigo-500" href="/trials">Request a Free Trial</a>
+                    </div>
+                  <div class="auth-header-nav-right-dropdown-menu-block">
+                    <form class="button_to" method="post" action="/users/sign_out"><input type="hidden" name="_method" value="delete" autocomplete="off"><button class="block bg-white py-2 text-sm text-gray-900 border-none cursor-pointer focus:border-none focus:outline-none hover:text-indigo-500 dark:bg-darkOpacity-120 dark:text-white dark:hover:text-indigo-300" type="submit">Sign Out</button><input type="hidden" name="authenticity_token" value="1NQGdW8pobvh84vkGC4HXxFtTAulh1RXH6up7gI4wqCFXqDO1koc3sbjAEcTbwcp-N8P7igaMQ5d3XP_U1SuAA" autocomplete="off"></form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="global-search hidden" x-data="initGlobalSearchHandlers()" data-turbo="true">
+              <!--
+  This example requires Tailwind CSS v3.0+ 
+  
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/forms'),
+    ],
+  }
+  ```
+-->
+<div class="fixed inset-0 z-50 overflow-y-auto p-4 sm:p-6 md:p-20" role="dialog" aria-modal="true">
+  <!--
+    Background overlay, show/hide based on modal state.
+
+    Entering: "ease-out duration-300"
+      From: "opacity-0"
+      To: "opacity-100"
+    Leaving: "ease-in duration-200"
+      From: "opacity-100"
+      To: "opacity-0"
+  -->
+  <div class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity" aria-hidden="true"></div>
+
+  <!--
+    Command palette, show/hide based on modal state.
+
+    Entering: "ease-out duration-300"
+      From: "opacity-0 scale-95"
+      To: "opacity-100 scale-100"
+    Leaving: "ease-in duration-200"
+      From: "opacity-100 scale-100"
+      To: "opacity-0 scale-95"
+  -->
+
+  <div class="mx-auto max-w-xl transform divide-y divide-gray-100 overflow-hidden rounded-xl bg-white shadow-2xl ring-1 ring-black ring-opacity-5 transition-all dark:bg-darkOpacity-80 dark:divide-darkOpacity-200" @click.outside="hideGlobalSearch($event)" @keydown.window.escape.prevent="hideGlobalSearch()" @keydown.window.prevent.ctrl.k="showGlobalSearch()" @keydown.window.prevent.ctrl.л="showGlobalSearch()">
+    <div class="relative">
+      <!-- Heroicon name: solid/search -->
+      <svg class="pointer-events-none absolute top-3.5 left-4 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+      </svg>
+
+      <form data-turbo-frame="global_search_result" data-controller="projects" action="/projects/global_search" accept-charset="UTF-8" method="get">
+        <input class="h-12 w-full border-0 bg-transparent pl-11 pr-4 text-gray-800 placeholder-gray-400 focus:ring-0 sm:text-sm dark:text-gray-300 dark:placeholder-gray-600" id="global_search_text" placeholder="Global Tests Search" value="" type="search" name="global_search_text" role="combobox" aria-expanded="false" aria-controls="options" autocomplete="off" data-action="input-&gt;projects#search">
+</form>    </div>
+
+    <!-- Results, show/hide based on command palette state. -->
+    <turbo-frame id="global_search_result">
+      <!-- Help, show/hide based on command palette state. -->
+      <div class="py-14 px-6 text-center text-sm sm:px-14">
+        <!-- Heroicon name: outline/support -->
+        <svg class="mx-auto h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+        </svg>
+        <p class="mt-4 font-semibold text-gray-900 dark:text-gray-300">Help with searching</p>
+        <p class="mt-2 text-gray-500">Use this tool to quickly search for suites and tests across all your projects. You can also use the search modifiers found in the footer below.</p>
+      </div>
+</turbo-frame>
+
+    <div class="flex flex-wrap items-center bg-gray-50 py-2.5 px-4 text-xs text-gray-700 dark:bg-darkOpacity-120 dark:text-gray-500">Use <kbd class="common-counter">@</kbd> <span class="hidden sm:inline">to search by tags</span>, <kbd class="common-counter">Esc</kbd> <span class="hidden sm:inline">to close</span>, <kbd class="common-counter">Ctrl</kbd> + <kbd class="common-counter">K</kbd> <span class="hidden sm:inline">to show or hide this window</span></div>
+  </div>
+</div>
+
+          </div>
+
+        <div class="auth-main-container">
+
+          <nav class="flex custom-breadcrumb" aria-label="Breadcrumb">
+  <ul role="list" class="mx-auto flex w-full max-w-screen-sx space-x-4">
+    
+  </ul>
+</nav>
+
+          
+<div id="container">
+  <div class="common-flash-wrapper">
+</div>
+
+  
+<script type="text/javascript">
+  function closePaymentFailedMessage() {
+    const paymentFailedMessage = document.querySelector('#paymentFailedMessage');
+    document.cookie = "hide_payment_failed_message=true; expires=24h;";
+    paymentFailedMessage.classList.add('hidden')
+  }
+</script>
+
+  <div class="common-page-header" current_list_type="grid">
+    <div class="common-page-header-left">
+      <h2>Projects</h2>
+
+          <select class="max-w-lg" name="company[id]" id="company_id"><option value="">Free Projects</option>
+<option selected="selected" value="789">QA Club Lviv</option></select>
+
+        
+
+
+<span class="tooltip-project-plan text-gray-400 text-sm flex items-center space-x-2 capitalize cursor-default pr-2">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+  </svg>
+
+    <span>
+      Enterprise plan
+    </span>
+
+
+
+</span>
+
+<script>
+  $(document).ready(function () {
+    const currentPlan = `
+      Enterprise
+`.trim();
+
+    tippy('.tooltip-project-plan', {
+      theme: 'indigo',
+      content: `
+        <div class="w-56 pt-1 pr-1 pl-1 break-words whitespace-normal">
+          <p class="text-sm font-semibold text-white pb-1">You have a ${currentPlan} subscription</p>
+          
+        </div>`,
+      allowHTML: true,
+      placement: 'bottom-start',
+    });
+  });
+</script>
+
+    </div>
+
+    <div class="common-page-header-right">
+      <div class="max-w-lg w-full lg:max-w-xs">
+        <label for="search" class="sr-only">Search</label>
+        <div class="common-search-wrapper">
+          <div class="common-search-wrapper-icon-div">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+
+          <input id="search" oninput="return run_search_project(this);" placeholder="Search Project" type="search" name="search">
+        </div>
+      </div>
+
+        <a class="common-btn-primary common-btn-lg" href="/projects/new">Create</a>
+      <div class="buttons cursor-pointer flex" style="display: flex" onclick="openTab(this)">
+        <div class="tablinks active_list_type" id="grid-view">
+          <svg id="grid-icon" viewBox="0 0 32 32" height="18px" style="fill: #6366F1;" width="18px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><g><path d="M15.42 7.221c0-.951-.771-1.721-1.721-1.721h-6.97c-.951 0-1.721.771-1.721 1.721v6.103c0 .951.771 1.721 1.721 1.721H13.7c.951 0 1.721-.771 1.721-1.721V7.221zM27.742 7.221A1.72 1.72 0 0 0 26.021 5.5H19.05c-.951 0-1.721.771-1.721 1.721v6.103c0 .951.77 1.721 1.721 1.721h6.971c.951 0 1.721-.771 1.721-1.721V7.221zM15.42 18.676c0-.951-.771-1.721-1.721-1.721h-6.97a1.72 1.72 0 0 0-1.721 1.721v6.104c0 .95.771 1.721 1.721 1.721H13.7c.951 0 1.721-.771 1.721-1.721v-6.104zM27.742 18.676a1.72 1.72 0 0 0-1.721-1.721H19.05a1.72 1.72 0 0 0-1.721 1.721v6.104c0 .95.77 1.721 1.721 1.721h6.971c.951 0 1.721-.771 1.721-1.721v-6.104z"></path></g></svg>
+        </div>
+        <div class="tablinks " id="table-view">
+          <svg id="table-icon" viewBox="0 0 32 32" height="18px" width="18px" style="fill: #e0e7ff;" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><g><path d="M25.695 9.43c0 .771-.631 1.401-1.402 1.401H8.875c-.771 0-1.402-.63-1.402-1.401V7.152c0-.771.631-1.402 1.402-1.402h15.418c.771 0 1.402.631 1.402 1.402V9.43zM25.695 24.848c0 .771-.631 1.402-1.402 1.402H8.875a1.406 1.406 0 0 1-1.402-1.402V22.57c0-.771.631-1.401 1.402-1.401h15.418c.771 0 1.402.63 1.402 1.401v2.278zM25.695 17.139c0 .771-.631 1.402-1.402 1.402H8.875a1.406 1.406 0 0 1-1.402-1.402v-2.277c0-.771.631-1.402 1.402-1.402h15.418c.771 0 1.402.631 1.402 1.402v2.277z"></path></g></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="tab-content" id="grid">
+  <ul class="grid gap-6 grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+      <li class="relative col-span-1 bg-white rounded-lg border-2 hover:border-indigo-500 cursor-pointer h-40  dark:bg-darkOpacity-120 dark:border-darkOpacity-120">
+
+
+        <a href="/projects/industrial-894fd/" title="Industrial" class="">
+          <div class="flex flex-col justify-between h-full w-full p-6">
+            <div class="flex items-center justify-between space-x-6">
+              <div class="flex-1 truncate">
+                <div class="flex items-center space-x-1">
+                  <h3 class="text-gray-700 text-xl font-medium truncate">Industrial</h3>
+                </div>
+                <p class="mt-1 text-gray-500 text-sm truncate dark:text-gray-300">0 tests</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div class="inline-flex items-center text-sm text-gray-900 font-medium">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK2ZwQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--90e9763ebf61d510ef4916624882f2a5267d52dc/user_avatar_11969.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1FhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bbdb68a25be6414f0582fd6e9f6b06c2fd829166/user_avatar_22637.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1VhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e1aae1d770334b139b8ea5cf45100171b53c162e/user_avatar_22638.png">
+                  <div class="flex justify-center items-center bg-gray-300 w-6 h-6 text-xs text-gray-600 rounded-full">
+                    +29
+                  </div>
+              </div>
+              <div class="project-badges">
+                <span class="common-badge common-badge-project-default">Classical</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="relative col-span-1 bg-white rounded-lg border-2 hover:border-indigo-500 cursor-pointer h-40  dark:bg-darkOpacity-120 dark:border-darkOpacity-120">
+
+
+        <a href="/projects/industrial-movies-tools/" title="Industrial, Movies &amp; Tools" class="">
+          <div class="flex flex-col justify-between h-full w-full p-6">
+            <div class="flex items-center justify-between space-x-6">
+              <div class="flex-1 truncate">
+                <div class="flex items-center space-x-1">
+                  <h3 class="text-gray-700 text-xl font-medium truncate">Industrial, Movies &amp; Tools</h3>
+                </div>
+                <p class="mt-1 text-gray-500 text-sm truncate dark:text-gray-300">3 tests</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div class="inline-flex items-center text-sm text-gray-900 font-medium">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK2ZwQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--90e9763ebf61d510ef4916624882f2a5267d52dc/user_avatar_11969.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1FhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bbdb68a25be6414f0582fd6e9f6b06c2fd829166/user_avatar_22637.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1VhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e1aae1d770334b139b8ea5cf45100171b53c162e/user_avatar_22638.png">
+                  <div class="flex justify-center items-center bg-gray-300 w-6 h-6 text-xs text-gray-600 rounded-full">
+                    +29
+                  </div>
+              </div>
+              <div class="project-badges">
+                <span class="common-badge common-badge-project-default">Classical</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="relative col-span-1 bg-white rounded-lg border-2 hover:border-indigo-500 cursor-pointer h-40  dark:bg-darkOpacity-120 dark:border-darkOpacity-120">
+
+
+        <a href="/projects/grocery-outdoors-shoes/" title="Grocery, Outdoors &amp; Shoes" class="">
+          <div class="flex flex-col justify-between h-full w-full p-6">
+            <div class="flex items-center justify-between space-x-6">
+              <div class="flex-1 truncate">
+                <div class="flex items-center space-x-1">
+                  <h3 class="text-gray-700 text-xl font-medium truncate">Grocery, Outdoors &amp; Shoes</h3>
+                </div>
+                <p class="mt-1 text-gray-500 text-sm truncate dark:text-gray-300">0 tests</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div class="inline-flex items-center text-sm text-gray-900 font-medium">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK2ZwQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--90e9763ebf61d510ef4916624882f2a5267d52dc/user_avatar_11969.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1FhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bbdb68a25be6414f0582fd6e9f6b06c2fd829166/user_avatar_22637.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1VhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e1aae1d770334b139b8ea5cf45100171b53c162e/user_avatar_22638.png">
+                  <div class="flex justify-center items-center bg-gray-300 w-6 h-6 text-xs text-gray-600 rounded-full">
+                    +29
+                  </div>
+              </div>
+              <div class="project-badges">
+                <span class="common-badge common-badge-project-default">Classical</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="relative col-span-1 bg-white rounded-lg border-2 hover:border-indigo-500 cursor-pointer h-40  dark:bg-darkOpacity-120 dark:border-darkOpacity-120">
+
+
+        <a href="/projects/automotive/" title="Automotive" class="">
+          <div class="flex flex-col justify-between h-full w-full p-6">
+            <div class="flex items-center justify-between space-x-6">
+              <div class="flex-1 truncate">
+                <div class="flex items-center space-x-1">
+                  <h3 class="text-gray-700 text-xl font-medium truncate">Automotive</h3>
+                </div>
+                <p class="mt-1 text-gray-500 text-sm truncate dark:text-gray-300">0 tests</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div class="inline-flex items-center text-sm text-gray-900 font-medium">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK2ZwQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--90e9763ebf61d510ef4916624882f2a5267d52dc/user_avatar_11969.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1FhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bbdb68a25be6414f0582fd6e9f6b06c2fd829166/user_avatar_22637.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1VhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e1aae1d770334b139b8ea5cf45100171b53c162e/user_avatar_22638.png">
+                  <div class="flex justify-center items-center bg-gray-300 w-6 h-6 text-xs text-gray-600 rounded-full">
+                    +29
+                  </div>
+              </div>
+              <div class="project-badges">
+                <span class="common-badge common-badge-project-default">Classical</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="relative col-span-1 bg-white rounded-lg border-2 hover:border-indigo-500 cursor-pointer h-40  dark:bg-darkOpacity-120 dark:border-darkOpacity-120">
+
+
+        <a href="/projects/asdfasdf/" title="asdfasdf" class="">
+          <div class="flex flex-col justify-between h-full w-full p-6">
+            <div class="flex items-center justify-between space-x-6">
+              <div class="flex-1 truncate">
+                <div class="flex items-center space-x-1">
+                  <h3 class="text-gray-700 text-xl font-medium truncate">asdfasdf</h3>
+                </div>
+                <p class="mt-1 text-gray-500 text-sm truncate dark:text-gray-300">0 tests</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div class="inline-flex items-center text-sm text-gray-900 font-medium">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK2ZwQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--90e9763ebf61d510ef4916624882f2a5267d52dc/user_avatar_11969.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1FhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bbdb68a25be6414f0582fd6e9f6b06c2fd829166/user_avatar_22637.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1VhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e1aae1d770334b139b8ea5cf45100171b53c162e/user_avatar_22638.png">
+                  <div class="flex justify-center items-center bg-gray-300 w-6 h-6 text-xs text-gray-600 rounded-full">
+                    +29
+                  </div>
+              </div>
+              <div class="project-badges">
+                <span class="common-badge common-badge-project-default">Classical</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="relative col-span-1 bg-white rounded-lg border-2 hover:border-indigo-500 cursor-pointer h-40  dark:bg-darkOpacity-120 dark:border-darkOpacity-120">
+
+
+        <a href="/projects/automotive-electronics-sports/" title="Automotive, Electronics &amp; Sports" class="">
+          <div class="flex flex-col justify-between h-full w-full p-6">
+            <div class="flex items-center justify-between space-x-6">
+              <div class="flex-1 truncate">
+                <div class="flex items-center space-x-1">
+                  <h3 class="text-gray-700 text-xl font-medium truncate">Automotive, Electronics &amp; Sports</h3>
+                </div>
+                <p class="mt-1 text-gray-500 text-sm truncate dark:text-gray-300">0 tests</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div class="inline-flex items-center text-sm text-gray-900 font-medium">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK2ZwQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--90e9763ebf61d510ef4916624882f2a5267d52dc/user_avatar_11969.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1FhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bbdb68a25be6414f0582fd6e9f6b06c2fd829166/user_avatar_22637.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1VhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e1aae1d770334b139b8ea5cf45100171b53c162e/user_avatar_22638.png">
+                  <div class="flex justify-center items-center bg-gray-300 w-6 h-6 text-xs text-gray-600 rounded-full">
+                    +29
+                  </div>
+              </div>
+              <div class="project-badges">
+                <span class="common-badge common-badge-project-default">Classical</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="relative col-span-1 bg-white rounded-lg border-2 hover:border-indigo-500 cursor-pointer h-40  dark:bg-darkOpacity-120 dark:border-darkOpacity-120">
+
+
+        <a href="/projects/industrial-5ed37/" title="Industrial" class="">
+          <div class="flex flex-col justify-between h-full w-full p-6">
+            <div class="flex items-center justify-between space-x-6">
+              <div class="flex-1 truncate">
+                <div class="flex items-center space-x-1">
+                  <h3 class="text-gray-700 text-xl font-medium truncate">Industrial</h3>
+                </div>
+                <p class="mt-1 text-gray-500 text-sm truncate dark:text-gray-300">0 tests</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div class="inline-flex items-center text-sm text-gray-900 font-medium">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK2ZwQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--90e9763ebf61d510ef4916624882f2a5267d52dc/user_avatar_11969.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1FhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bbdb68a25be6414f0582fd6e9f6b06c2fd829166/user_avatar_22637.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1VhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e1aae1d770334b139b8ea5cf45100171b53c162e/user_avatar_22638.png">
+                  <div class="flex justify-center items-center bg-gray-300 w-6 h-6 text-xs text-gray-600 rounded-full">
+                    +29
+                  </div>
+              </div>
+              <div class="project-badges">
+                <span class="common-badge common-badge-project-default">Classical</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="relative col-span-1 bg-white rounded-lg border-2 hover:border-indigo-500 cursor-pointer h-40  dark:bg-darkOpacity-120 dark:border-darkOpacity-120">
+
+
+        <a href="/projects/beauty-health-movies-03598/" title="Beauty, Health &amp; Movies" class="">
+          <div class="flex flex-col justify-between h-full w-full p-6">
+            <div class="flex items-center justify-between space-x-6">
+              <div class="flex-1 truncate">
+                <div class="flex items-center space-x-1">
+                  <h3 class="text-gray-700 text-xl font-medium truncate">Beauty, Health &amp; Movies</h3>
+                </div>
+                <p class="mt-1 text-gray-500 text-sm truncate dark:text-gray-300">0 tests</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div class="inline-flex items-center text-sm text-gray-900 font-medium">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK2ZwQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--90e9763ebf61d510ef4916624882f2a5267d52dc/user_avatar_11969.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1FhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bbdb68a25be6414f0582fd6e9f6b06c2fd829166/user_avatar_22637.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1VhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e1aae1d770334b139b8ea5cf45100171b53c162e/user_avatar_22638.png">
+                  <div class="flex justify-center items-center bg-gray-300 w-6 h-6 text-xs text-gray-600 rounded-full">
+                    +29
+                  </div>
+              </div>
+              <div class="project-badges">
+                <span class="common-badge common-badge-project-default">Classical</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="relative col-span-1 bg-white rounded-lg border-2 hover:border-indigo-500 cursor-pointer h-40  dark:bg-darkOpacity-120 dark:border-darkOpacity-120">
+
+
+        <a href="/projects/ply/" title="PLY" class="">
+          <div class="flex flex-col justify-between h-full w-full p-6">
+            <div class="flex items-center justify-between space-x-6">
+              <div class="flex-1 truncate">
+                <div class="flex items-center space-x-1">
+                  <h3 class="text-gray-700 text-xl font-medium truncate">PLY</h3>
+                </div>
+                <p class="mt-1 text-gray-500 text-sm truncate dark:text-gray-300">0 tests</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div class="inline-flex items-center text-sm text-gray-900 font-medium">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1FhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bbdb68a25be6414f0582fd6e9f6b06c2fd829166/user_avatar_22637.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1VhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e1aae1d770334b139b8ea5cf45100171b53c162e/user_avatar_22638.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNzRhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e8e57a216de39d6aa1980cecd5574b4520f21513/user_avatar_22635.png">
+                  <div class="flex justify-center items-center bg-gray-300 w-6 h-6 text-xs text-gray-600 rounded-full">
+                    +28
+                  </div>
+              </div>
+              <div class="project-badges">
+                <span class="common-badge common-badge-project-default">Classical</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="relative col-span-1 bg-white rounded-lg border-2 hover:border-indigo-500 cursor-pointer h-40  dark:bg-darkOpacity-120 dark:border-darkOpacity-120">
+
+
+        <a href="/projects/baby-jewelry-movies/" title="Baby, Jewelry &amp; Movies" class="">
+          <div class="flex flex-col justify-between h-full w-full p-6">
+            <div class="flex items-center justify-between space-x-6">
+              <div class="flex-1 truncate">
+                <div class="flex items-center space-x-1">
+                  <h3 class="text-gray-700 text-xl font-medium truncate">Baby, Jewelry &amp; Movies</h3>
+                </div>
+                <p class="mt-1 text-gray-500 text-sm truncate dark:text-gray-300">0 tests</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div class="inline-flex items-center text-sm text-gray-900 font-medium">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK2ZwQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--90e9763ebf61d510ef4916624882f2a5267d52dc/user_avatar_11969.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1FhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bbdb68a25be6414f0582fd6e9f6b06c2fd829166/user_avatar_22637.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1VhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e1aae1d770334b139b8ea5cf45100171b53c162e/user_avatar_22638.png">
+                  <div class="flex justify-center items-center bg-gray-300 w-6 h-6 text-xs text-gray-600 rounded-full">
+                    +28
+                  </div>
+              </div>
+              <div class="project-badges">
+                <span class="common-badge common-badge-project-default">Classical</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="relative col-span-1 bg-white rounded-lg border-2 hover:border-indigo-500 cursor-pointer h-40  dark:bg-darkOpacity-120 dark:border-darkOpacity-120">
+
+
+        <a href="/projects/home-outdoors/" title="Home &amp; Outdoors" class="">
+          <div class="flex flex-col justify-between h-full w-full p-6">
+            <div class="flex items-center justify-between space-x-6">
+              <div class="flex-1 truncate">
+                <div class="flex items-center space-x-1">
+                  <h3 class="text-gray-700 text-xl font-medium truncate">Home &amp; Outdoors</h3>
+                </div>
+                <p class="mt-1 text-gray-500 text-sm truncate dark:text-gray-300">0 tests</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div class="inline-flex items-center text-sm text-gray-900 font-medium">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK2ZwQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--90e9763ebf61d510ef4916624882f2a5267d52dc/user_avatar_11969.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1FhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bbdb68a25be6414f0582fd6e9f6b06c2fd829166/user_avatar_22637.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1VhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e1aae1d770334b139b8ea5cf45100171b53c162e/user_avatar_22638.png">
+                  <div class="flex justify-center items-center bg-gray-300 w-6 h-6 text-xs text-gray-600 rounded-full">
+                    +28
+                  </div>
+              </div>
+              <div class="project-badges">
+                <span class="common-badge common-badge-project-default">Classical</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="relative col-span-1 bg-white rounded-lg border-2 hover:border-indigo-500 cursor-pointer h-40  dark:bg-darkOpacity-120 dark:border-darkOpacity-120">
+
+
+        <a href="/projects/electronics-grocery-music/" title="Electronics, Grocery &amp; Music" class="">
+          <div class="flex flex-col justify-between h-full w-full p-6">
+            <div class="flex items-center justify-between space-x-6">
+              <div class="flex-1 truncate">
+                <div class="flex items-center space-x-1">
+                  <h3 class="text-gray-700 text-xl font-medium truncate">Electronics, Grocery &amp; Music</h3>
+                </div>
+                <p class="mt-1 text-gray-500 text-sm truncate dark:text-gray-300">0 tests</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div class="inline-flex items-center text-sm text-gray-900 font-medium">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK2ZwQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--90e9763ebf61d510ef4916624882f2a5267d52dc/user_avatar_11969.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1FhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bbdb68a25be6414f0582fd6e9f6b06c2fd829166/user_avatar_22637.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1VhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e1aae1d770334b139b8ea5cf45100171b53c162e/user_avatar_22638.png">
+                  <div class="flex justify-center items-center bg-gray-300 w-6 h-6 text-xs text-gray-600 rounded-full">
+                    +28
+                  </div>
+              </div>
+              <div class="project-badges">
+                <span class="common-badge common-badge-project-default">Classical</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="relative col-span-1 bg-white rounded-lg border-2 hover:border-indigo-500 cursor-pointer h-40  dark:bg-darkOpacity-120 dark:border-darkOpacity-120">
+
+
+        <a href="/projects/enormous-steel-watch/" title="Enormous Steel Watch" class="">
+          <div class="flex flex-col justify-between h-full w-full p-6">
+            <div class="flex items-center justify-between space-x-6">
+              <div class="flex-1 truncate">
+                <div class="flex items-center space-x-1">
+                  <h3 class="text-gray-700 text-xl font-medium truncate">Enormous Steel Watch</h3>
+                </div>
+                <p class="mt-1 text-gray-500 text-sm truncate dark:text-gray-300">0 tests</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div class="inline-flex items-center text-sm text-gray-900 font-medium">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBakc1IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--dfcd32e3d8256e107437ddb40b5df177e41e08ae/user_avatar_13528.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1FhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bbdb68a25be6414f0582fd6e9f6b06c2fd829166/user_avatar_22637.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1VhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e1aae1d770334b139b8ea5cf45100171b53c162e/user_avatar_22638.png">
+                  <div class="flex justify-center items-center bg-gray-300 w-6 h-6 text-xs text-gray-600 rounded-full">
+                    +28
+                  </div>
+              </div>
+              <div class="project-badges">
+                <span class="common-badge common-badge-project-default">Classical</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="relative col-span-1 bg-white rounded-lg border-2 hover:border-indigo-500 cursor-pointer h-40  dark:bg-darkOpacity-120 dark:border-darkOpacity-120">
+
+
+        <a href="/projects/ergonomic-cotton-keyboard/" title="Ergonomic Cotton Keyboard" class="">
+          <div class="flex flex-col justify-between h-full w-full p-6">
+            <div class="flex items-center justify-between space-x-6">
+              <div class="flex-1 truncate">
+                <div class="flex items-center space-x-1">
+                  <h3 class="text-gray-700 text-xl font-medium truncate">Ergonomic Cotton Keyboard</h3>
+                </div>
+                <p class="mt-1 text-gray-500 text-sm truncate dark:text-gray-300">0 tests</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div class="inline-flex items-center text-sm text-gray-900 font-medium">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbCs0IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b12c538c30593411826d97719679e28d5fa10ec2/user_avatar_13518.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1FhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bbdb68a25be6414f0582fd6e9f6b06c2fd829166/user_avatar_22637.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1VhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e1aae1d770334b139b8ea5cf45100171b53c162e/user_avatar_22638.png">
+                  <div class="flex justify-center items-center bg-gray-300 w-6 h-6 text-xs text-gray-600 rounded-full">
+                    +29
+                  </div>
+              </div>
+              <div class="project-badges">
+                <span class="common-badge common-badge-project-default">Classical</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="relative col-span-1 bg-white rounded-lg border-2 hover:border-indigo-500 cursor-pointer h-40  dark:bg-darkOpacity-120 dark:border-darkOpacity-120">
+
+
+        <a href="/projects/khkhkh/" title="khkhkh" class="">
+          <div class="flex flex-col justify-between h-full w-full p-6">
+            <div class="flex items-center justify-between space-x-6">
+              <div class="flex-1 truncate">
+                <div class="flex items-center space-x-1">
+                  <h3 class="text-gray-700 text-xl font-medium truncate">khkhkh</h3>
+                </div>
+                <p class="mt-1 text-gray-500 text-sm truncate dark:text-gray-300">0 tests</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div class="inline-flex items-center text-sm text-gray-900 font-medium">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbCs0IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b12c538c30593411826d97719679e28d5fa10ec2/user_avatar_13518.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1FhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bbdb68a25be6414f0582fd6e9f6b06c2fd829166/user_avatar_22637.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1VhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e1aae1d770334b139b8ea5cf45100171b53c162e/user_avatar_22638.png">
+                  <div class="flex justify-center items-center bg-gray-300 w-6 h-6 text-xs text-gray-600 rounded-full">
+                    +13
+                  </div>
+              </div>
+              <div class="project-badges">
+                <span class="common-badge common-badge-project-default">Classical</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="relative col-span-1 bg-white rounded-lg border-2 hover:border-indigo-500 cursor-pointer h-40  dark:bg-darkOpacity-120 dark:border-darkOpacity-120">
+
+
+        <a href="/projects/lightweight-leather-gloves/" title="Lightweight Leather Gloves" class="">
+          <div class="flex flex-col justify-between h-full w-full p-6">
+            <div class="flex items-center justify-between space-x-6">
+              <div class="flex-1 truncate">
+                <div class="flex items-center space-x-1">
+                  <h3 class="text-gray-700 text-xl font-medium truncate">Lightweight Leather Gloves</h3>
+                </div>
+                <p class="mt-1 text-gray-500 text-sm truncate dark:text-gray-300">0 tests</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div class="inline-flex items-center text-sm text-gray-900 font-medium">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbCs0IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b12c538c30593411826d97719679e28d5fa10ec2/user_avatar_13518.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1FhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bbdb68a25be6414f0582fd6e9f6b06c2fd829166/user_avatar_22637.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1VhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e1aae1d770334b139b8ea5cf45100171b53c162e/user_avatar_22638.png">
+                  <div class="flex justify-center items-center bg-gray-300 w-6 h-6 text-xs text-gray-600 rounded-full">
+                    +28
+                  </div>
+              </div>
+              <div class="project-badges">
+                <span class="common-badge common-badge-project-default">Classical</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="relative col-span-1 bg-white rounded-lg border-2 hover:border-indigo-500 cursor-pointer h-40  dark:bg-darkOpacity-120 dark:border-darkOpacity-120">
+
+
+        <a href="/projects/automotive-baby-music/" title="Automotive, Baby &amp; Music" class="">
+          <div class="flex flex-col justify-between h-full w-full p-6">
+            <div class="flex items-center justify-between space-x-6">
+              <div class="flex-1 truncate">
+                <div class="flex items-center space-x-1">
+                  <h3 class="text-gray-700 text-xl font-medium truncate">Automotive, Baby &amp; Music</h3>
+                </div>
+                <p class="mt-1 text-gray-500 text-sm truncate dark:text-gray-300">0 tests</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div class="inline-flex items-center text-sm text-gray-900 font-medium">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK2ZwQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--90e9763ebf61d510ef4916624882f2a5267d52dc/user_avatar_11969.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1FhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bbdb68a25be6414f0582fd6e9f6b06c2fd829166/user_avatar_22637.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1VhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e1aae1d770334b139b8ea5cf45100171b53c162e/user_avatar_22638.png">
+                  <div class="flex justify-center items-center bg-gray-300 w-6 h-6 text-xs text-gray-600 rounded-full">
+                    +29
+                  </div>
+              </div>
+              <div class="project-badges">
+                <span class="common-badge common-badge-project-default">Classical</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="relative col-span-1 bg-white rounded-lg border-2 hover:border-indigo-500 cursor-pointer h-40  dark:bg-darkOpacity-120 dark:border-darkOpacity-120">
+
+
+        <a href="/projects/industrial-jewelry/" title="Industrial &amp; Jewelry" class="">
+          <div class="flex flex-col justify-between h-full w-full p-6">
+            <div class="flex items-center justify-between space-x-6">
+              <div class="flex-1 truncate">
+                <div class="flex items-center space-x-1">
+                  <h3 class="text-gray-700 text-xl font-medium truncate">Industrial &amp; Jewelry</h3>
+                </div>
+                <p class="mt-1 text-gray-500 text-sm truncate dark:text-gray-300">0 tests</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div class="inline-flex items-center text-sm text-gray-900 font-medium">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK2ZwQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--90e9763ebf61d510ef4916624882f2a5267d52dc/user_avatar_11969.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1FhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bbdb68a25be6414f0582fd6e9f6b06c2fd829166/user_avatar_22637.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1VhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e1aae1d770334b139b8ea5cf45100171b53c162e/user_avatar_22638.png">
+                  <div class="flex justify-center items-center bg-gray-300 w-6 h-6 text-xs text-gray-600 rounded-full">
+                    +29
+                  </div>
+              </div>
+              <div class="project-badges">
+                <span class="common-badge common-badge-project-default">Classical</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="relative col-span-1 bg-white rounded-lg border-2 hover:border-indigo-500 cursor-pointer h-40  dark:bg-darkOpacity-120 dark:border-darkOpacity-120">
+
+
+        <a href="/projects/clothing/" title="Clothing" class="">
+          <div class="flex flex-col justify-between h-full w-full p-6">
+            <div class="flex items-center justify-between space-x-6">
+              <div class="flex-1 truncate">
+                <div class="flex items-center space-x-1">
+                  <h3 class="text-gray-700 text-xl font-medium truncate">Clothing</h3>
+                </div>
+                <p class="mt-1 text-gray-500 text-sm truncate dark:text-gray-300">0 tests</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div class="inline-flex items-center text-sm text-gray-900 font-medium">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK2ZwQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--90e9763ebf61d510ef4916624882f2a5267d52dc/user_avatar_11969.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1FhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bbdb68a25be6414f0582fd6e9f6b06c2fd829166/user_avatar_22637.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1VhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e1aae1d770334b139b8ea5cf45100171b53c162e/user_avatar_22638.png">
+                  <div class="flex justify-center items-center bg-gray-300 w-6 h-6 text-xs text-gray-600 rounded-full">
+                    +29
+                  </div>
+              </div>
+              <div class="project-badges">
+                <span class="common-badge common-badge-project-default">Classical</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="relative col-span-1 bg-white rounded-lg border-2 hover:border-indigo-500 cursor-pointer h-40  dark:bg-darkOpacity-120 dark:border-darkOpacity-120">
+
+
+        <a href="/projects/books-5b0f1/" title="Books" class="">
+          <div class="flex flex-col justify-between h-full w-full p-6">
+            <div class="flex items-center justify-between space-x-6">
+              <div class="flex-1 truncate">
+                <div class="flex items-center space-x-1">
+                  <h3 class="text-gray-700 text-xl font-medium truncate">Books</h3>
+                </div>
+                <p class="mt-1 text-gray-500 text-sm truncate dark:text-gray-300">0 tests</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div class="inline-flex items-center text-sm text-gray-900 font-medium">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK2ZwQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--90e9763ebf61d510ef4916624882f2a5267d52dc/user_avatar_11969.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1FhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bbdb68a25be6414f0582fd6e9f6b06c2fd829166/user_avatar_22637.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1VhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e1aae1d770334b139b8ea5cf45100171b53c162e/user_avatar_22638.png">
+                  <div class="flex justify-center items-center bg-gray-300 w-6 h-6 text-xs text-gray-600 rounded-full">
+                    +29
+                  </div>
+              </div>
+              <div class="project-badges">
+                <span class="common-badge common-badge-project-default">Classical</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="relative col-span-1 bg-white rounded-lg border-2 hover:border-indigo-500 cursor-pointer h-40  dark:bg-darkOpacity-120 dark:border-darkOpacity-120">
+
+
+        <a href="/projects/health-outdoors/" title="Health &amp; Outdoors" class="">
+          <div class="flex flex-col justify-between h-full w-full p-6">
+            <div class="flex items-center justify-between space-x-6">
+              <div class="flex-1 truncate">
+                <div class="flex items-center space-x-1">
+                  <h3 class="text-gray-700 text-xl font-medium truncate">Health &amp; Outdoors</h3>
+                </div>
+                <p class="mt-1 text-gray-500 text-sm truncate dark:text-gray-300">0 tests</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div class="inline-flex items-center text-sm text-gray-900 font-medium">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK2ZwQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--90e9763ebf61d510ef4916624882f2a5267d52dc/user_avatar_11969.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1FhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bbdb68a25be6414f0582fd6e9f6b06c2fd829166/user_avatar_22637.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1VhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e1aae1d770334b139b8ea5cf45100171b53c162e/user_avatar_22638.png">
+                  <div class="flex justify-center items-center bg-gray-300 w-6 h-6 text-xs text-gray-600 rounded-full">
+                    +28
+                  </div>
+              </div>
+              <div class="project-badges">
+                <span class="common-badge common-badge-project-default">Classical</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="relative col-span-1 bg-white rounded-lg border-2 hover:border-indigo-500 cursor-pointer h-40  dark:bg-darkOpacity-120 dark:border-darkOpacity-120">
+
+
+        <a href="/projects/electronics-garden-health/" title="Electronics, Garden &amp; Health" class="">
+          <div class="flex flex-col justify-between h-full w-full p-6">
+            <div class="flex items-center justify-between space-x-6">
+              <div class="flex-1 truncate">
+                <div class="flex items-center space-x-1">
+                  <h3 class="text-gray-700 text-xl font-medium truncate">Electronics, Garden &amp; Health</h3>
+                </div>
+                <p class="mt-1 text-gray-500 text-sm truncate dark:text-gray-300">0 tests</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div class="inline-flex items-center text-sm text-gray-900 font-medium">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK2ZwQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--90e9763ebf61d510ef4916624882f2a5267d52dc/user_avatar_11969.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1FhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bbdb68a25be6414f0582fd6e9f6b06c2fd829166/user_avatar_22637.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1VhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e1aae1d770334b139b8ea5cf45100171b53c162e/user_avatar_22638.png">
+                  <div class="flex justify-center items-center bg-gray-300 w-6 h-6 text-xs text-gray-600 rounded-full">
+                    +28
+                  </div>
+              </div>
+              <div class="project-badges">
+                <span class="common-badge common-badge-project-default">Classical</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="relative col-span-1 bg-white rounded-lg border-2 hover:border-indigo-500 cursor-pointer h-40  dark:bg-darkOpacity-120 dark:border-darkOpacity-120">
+
+
+        <a href="/projects/popopo-c18dc/" title="Popopo" class="">
+          <div class="flex flex-col justify-between h-full w-full p-6">
+            <div class="flex items-center justify-between space-x-6">
+              <div class="flex-1 truncate">
+                <div class="flex items-center space-x-1">
+                  <h3 class="text-gray-700 text-xl font-medium truncate">Popopo</h3>
+                </div>
+                <p class="mt-1 text-gray-500 text-sm truncate dark:text-gray-300">0 tests</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div class="inline-flex items-center text-sm text-gray-900 font-medium">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK2ZwQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--90e9763ebf61d510ef4916624882f2a5267d52dc/user_avatar_11969.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1FhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bbdb68a25be6414f0582fd6e9f6b06c2fd829166/user_avatar_22637.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1VhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e1aae1d770334b139b8ea5cf45100171b53c162e/user_avatar_22638.png">
+                  <div class="flex justify-center items-center bg-gray-300 w-6 h-6 text-xs text-gray-600 rounded-full">
+                    +13
+                  </div>
+              </div>
+              <div class="project-badges">
+                <span class="common-badge common-badge-project-default">Classical</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="relative col-span-1 bg-white rounded-lg border-2 hover:border-indigo-500 cursor-pointer h-40  dark:bg-darkOpacity-120 dark:border-darkOpacity-120">
+
+
+        <a href="/projects/popopo-83dd8/" title="Popopo" class="">
+          <div class="flex flex-col justify-between h-full w-full p-6">
+            <div class="flex items-center justify-between space-x-6">
+              <div class="flex-1 truncate">
+                <div class="flex items-center space-x-1">
+                  <h3 class="text-gray-700 text-xl font-medium truncate">Popopo</h3>
+                </div>
+                <p class="mt-1 text-gray-500 text-sm truncate dark:text-gray-300">0 tests</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div class="inline-flex items-center text-sm text-gray-900 font-medium">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK2ZwQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--90e9763ebf61d510ef4916624882f2a5267d52dc/user_avatar_11969.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1FhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bbdb68a25be6414f0582fd6e9f6b06c2fd829166/user_avatar_22637.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1VhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e1aae1d770334b139b8ea5cf45100171b53c162e/user_avatar_22638.png">
+                  <div class="flex justify-center items-center bg-gray-300 w-6 h-6 text-xs text-gray-600 rounded-full">
+                    +13
+                  </div>
+              </div>
+              <div class="project-badges">
+                <span class="common-badge common-badge-project-default">Classical</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="relative col-span-1 bg-white rounded-lg border-2 hover:border-indigo-500 cursor-pointer h-40  dark:bg-darkOpacity-120 dark:border-darkOpacity-120">
+
+
+        <a href="/projects/gorgeous-plastic-lamp/" title="Gorgeous Plastic Lamp" class="">
+          <div class="flex flex-col justify-between h-full w-full p-6">
+            <div class="flex items-center justify-between space-x-6">
+              <div class="flex-1 truncate">
+                <div class="flex items-center space-x-1">
+                  <h3 class="text-gray-700 text-xl font-medium truncate">Gorgeous Plastic Lamp</h3>
+                </div>
+                <p class="mt-1 text-gray-500 text-sm truncate dark:text-gray-300">0 tests</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div class="inline-flex items-center text-sm text-gray-900 font-medium">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBakc1IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--dfcd32e3d8256e107437ddb40b5df177e41e08ae/user_avatar_13528.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1FhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bbdb68a25be6414f0582fd6e9f6b06c2fd829166/user_avatar_22637.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1VhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e1aae1d770334b139b8ea5cf45100171b53c162e/user_avatar_22638.png">
+                  <div class="flex justify-center items-center bg-gray-300 w-6 h-6 text-xs text-gray-600 rounded-full">
+                    +28
+                  </div>
+              </div>
+              <div class="project-badges">
+                <span class="common-badge common-badge-project-default">Classical</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="relative col-span-1 bg-white rounded-lg border-2 hover:border-indigo-500 cursor-pointer h-40  dark:bg-darkOpacity-120 dark:border-darkOpacity-120">
+
+
+        <a href="/projects/nbb/" title="nbb" class="">
+          <div class="flex flex-col justify-between h-full w-full p-6">
+            <div class="flex items-center justify-between space-x-6">
+              <div class="flex-1 truncate">
+                <div class="flex items-center space-x-1">
+                  <h3 class="text-gray-700 text-xl font-medium truncate">nbb</h3>
+                </div>
+                <p class="mt-1 text-gray-500 text-sm truncate dark:text-gray-300">0 tests</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div class="inline-flex items-center text-sm text-gray-900 font-medium">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBakc1IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--dfcd32e3d8256e107437ddb40b5df177e41e08ae/user_avatar_13528.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1FhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bbdb68a25be6414f0582fd6e9f6b06c2fd829166/user_avatar_22637.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1VhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e1aae1d770334b139b8ea5cf45100171b53c162e/user_avatar_22638.png">
+                  <div class="flex justify-center items-center bg-gray-300 w-6 h-6 text-xs text-gray-600 rounded-full">
+                    +13
+                  </div>
+              </div>
+              <div class="project-badges">
+                <span class="common-badge common-badge-project-default">Classical</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="relative col-span-1 bg-white rounded-lg border-2 hover:border-indigo-500 cursor-pointer h-40  dark:bg-darkOpacity-120 dark:border-darkOpacity-120">
+
+
+        <a href="/projects/rustic-plastic-chair/" title="Rustic Plastic Chair" class="">
+          <div class="flex flex-col justify-between h-full w-full p-6">
+            <div class="flex items-center justify-between space-x-6">
+              <div class="flex-1 truncate">
+                <div class="flex items-center space-x-1">
+                  <h3 class="text-gray-700 text-xl font-medium truncate">Rustic Plastic Chair</h3>
+                </div>
+                <p class="mt-1 text-gray-500 text-sm truncate dark:text-gray-300">0 tests</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div class="inline-flex items-center text-sm text-gray-900 font-medium">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBakc1IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--dfcd32e3d8256e107437ddb40b5df177e41e08ae/user_avatar_13528.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1FhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bbdb68a25be6414f0582fd6e9f6b06c2fd829166/user_avatar_22637.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1VhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e1aae1d770334b139b8ea5cf45100171b53c162e/user_avatar_22638.png">
+                  <div class="flex justify-center items-center bg-gray-300 w-6 h-6 text-xs text-gray-600 rounded-full">
+                    +29
+                  </div>
+              </div>
+              <div class="project-badges">
+                <span class="common-badge common-badge-project-default">Classical</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="relative col-span-1 bg-white rounded-lg border-2 hover:border-indigo-500 cursor-pointer h-40  dark:bg-darkOpacity-120 dark:border-darkOpacity-120">
+
+
+        <a href="/projects/enormous-bronze-lamp/" title="Enormous Bronze Lamp" class="">
+          <div class="flex flex-col justify-between h-full w-full p-6">
+            <div class="flex items-center justify-between space-x-6">
+              <div class="flex-1 truncate">
+                <div class="flex items-center space-x-1">
+                  <h3 class="text-gray-700 text-xl font-medium truncate">Enormous Bronze Lamp</h3>
+                </div>
+                <p class="mt-1 text-gray-500 text-sm truncate dark:text-gray-300">0 tests</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div class="inline-flex items-center text-sm text-gray-900 font-medium">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBakc1IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--dfcd32e3d8256e107437ddb40b5df177e41e08ae/user_avatar_13528.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1FhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bbdb68a25be6414f0582fd6e9f6b06c2fd829166/user_avatar_22637.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1VhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e1aae1d770334b139b8ea5cf45100171b53c162e/user_avatar_22638.png">
+                  <div class="flex justify-center items-center bg-gray-300 w-6 h-6 text-xs text-gray-600 rounded-full">
+                    +14
+                  </div>
+              </div>
+              <div class="project-badges">
+                <span class="common-badge common-badge-project-default">Classical</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="relative col-span-1 bg-white rounded-lg border-2 hover:border-indigo-500 cursor-pointer h-40  dark:bg-darkOpacity-120 dark:border-darkOpacity-120">
+
+
+        <a href="/projects/gorgeous-rubber-coat/" title="Gorgeous Rubber Coat" class="">
+          <div class="flex flex-col justify-between h-full w-full p-6">
+            <div class="flex items-center justify-between space-x-6">
+              <div class="flex-1 truncate">
+                <div class="flex items-center space-x-1">
+                  <h3 class="text-gray-700 text-xl font-medium truncate">Gorgeous Rubber Coat</h3>
+                </div>
+                <p class="mt-1 text-gray-500 text-sm truncate dark:text-gray-300">0 tests</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div class="inline-flex items-center text-sm text-gray-900 font-medium">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBakc1IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--dfcd32e3d8256e107437ddb40b5df177e41e08ae/user_avatar_13528.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1FhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bbdb68a25be6414f0582fd6e9f6b06c2fd829166/user_avatar_22637.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1VhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e1aae1d770334b139b8ea5cf45100171b53c162e/user_avatar_22638.png">
+                  <div class="flex justify-center items-center bg-gray-300 w-6 h-6 text-xs text-gray-600 rounded-full">
+                    +14
+                  </div>
+              </div>
+              <div class="project-badges">
+                <span class="common-badge common-badge-project-default">Classical</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="relative col-span-1 bg-white rounded-lg border-2 hover:border-indigo-500 cursor-pointer h-40  dark:bg-darkOpacity-120 dark:border-darkOpacity-120">
+
+
+        <a href="/projects/durable-wool-wallet/" title="Durable Wool Wallet" class="">
+          <div class="flex flex-col justify-between h-full w-full p-6">
+            <div class="flex items-center justify-between space-x-6">
+              <div class="flex-1 truncate">
+                <div class="flex items-center space-x-1">
+                  <h3 class="text-gray-700 text-xl font-medium truncate">Durable Wool Wallet</h3>
+                </div>
+                <p class="mt-1 text-gray-500 text-sm truncate dark:text-gray-300">0 tests</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div class="inline-flex items-center text-sm text-gray-900 font-medium">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBakc1IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--dfcd32e3d8256e107437ddb40b5df177e41e08ae/user_avatar_13528.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1FhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bbdb68a25be6414f0582fd6e9f6b06c2fd829166/user_avatar_22637.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1VhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e1aae1d770334b139b8ea5cf45100171b53c162e/user_avatar_22638.png">
+                  <div class="flex justify-center items-center bg-gray-300 w-6 h-6 text-xs text-gray-600 rounded-full">
+                    +14
+                  </div>
+              </div>
+              <div class="project-badges">
+                <span class="common-badge common-badge-project-default">Classical</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="relative col-span-1 bg-white rounded-lg border-2 hover:border-indigo-500 cursor-pointer h-40  dark:bg-darkOpacity-120 dark:border-darkOpacity-120">
+
+
+        <a href="/projects/movies-c37a5/" title="Movies" class="">
+          <div class="flex flex-col justify-between h-full w-full p-6">
+            <div class="flex items-center justify-between space-x-6">
+              <div class="flex-1 truncate">
+                <div class="flex items-center space-x-1">
+                  <h3 class="text-gray-700 text-xl font-medium truncate">Movies</h3>
+                </div>
+                <p class="mt-1 text-gray-500 text-sm truncate dark:text-gray-300">0 tests</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div class="inline-flex items-center text-sm text-gray-900 font-medium">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBakc1IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--dfcd32e3d8256e107437ddb40b5df177e41e08ae/user_avatar_13528.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1FhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bbdb68a25be6414f0582fd6e9f6b06c2fd829166/user_avatar_22637.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK1VhQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e1aae1d770334b139b8ea5cf45100171b53c162e/user_avatar_22638.png">
+                  <div class="flex justify-center items-center bg-gray-300 w-6 h-6 text-xs text-gray-600 rounded-full">
+                    +13
+                  </div>
+              </div>
+              <div class="project-badges">
+                <span class="common-badge common-badge-project-default">Classical</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="relative col-span-1 bg-white rounded-lg border-2 hover:border-indigo-500 cursor-pointer h-40  dark:bg-darkOpacity-120 dark:border-darkOpacity-120">
+
+
+        <a href="/projects/myproject1/" title="MyProjectTaras" class="">
+          <div class="flex flex-col justify-between h-full w-full p-6">
+            <div class="flex items-center justify-between space-x-6">
+              <div class="flex-1 truncate">
+                <div class="flex items-center space-x-1">
+                  <h3 class="text-gray-700 text-xl font-medium truncate">MyProjectTaras</h3>
+                </div>
+                <p class="mt-1 text-gray-500 text-sm truncate dark:text-gray-300">5 tests</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div class="inline-flex items-center text-sm text-gray-900 font-medium">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMVpRR3c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--c3d0081c806419113992ebb64eb363267cbcbbce/user_avatar_32877.png">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 -mr-2 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOElmSEE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--a3ab0cae656791b154b70b95d4de0394c51f211e/user_avatar_16414.png">
+              </div>
+              <div class="project-badges">
+                <span class="common-badge common-badge-project-default">Classical</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="relative col-span-1 bg-white rounded-lg border-2 hover:border-indigo-500 cursor-pointer h-40  dark:bg-darkOpacity-120 dark:border-darkOpacity-120">
+
+
+        <a href="/projects/proj1-9680a/" title="Proj1" class="">
+          <div class="flex flex-col justify-between h-full w-full p-6">
+            <div class="flex items-center justify-between space-x-6">
+              <div class="flex-1 truncate">
+                <div class="flex items-center space-x-1">
+                  <h3 class="text-gray-700 text-xl font-medium truncate">Proj1</h3>
+                </div>
+                <p class="mt-1 text-gray-500 text-sm truncate dark:text-gray-300">0 tests</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div class="inline-flex items-center text-sm text-gray-900 font-medium">
+                    <img height="30" width="30" class="w-6 h-6 bg-gray-300 border border-white rounded-full dark:border-darkOpacity-120 dark:bg-darkOpacity-120" src="https://app.testomat.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMVpRR3c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--c3d0081c806419113992ebb64eb363267cbcbbce/user_avatar_32877.png">
+              </div>
+              <div class="project-badges">
+                <span class="common-badge common-badge-project-default">Classical</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+  </ul>
+</div>
+
+
+    <div class="flex items-center h-20">
+
+  </div>
+
+</div>
+
+<script>
+  function switchCompany(id) {
+    document.cookie = 'company_id=' + id + '; path=/';
+    window.location.reload();
+  }
+
+  $(document).ready(function () {
+    const id = $('#company_id').val();
+    document.cookie = 'company_id=' + id + '; path=/';
+
+    $('#company_id').change(function (e) {
+      const id = e.target.value;
+      switchCompany(id);
+    });
+
+    tippy('.tooltip-project-locked', {
+      theme: 'indigo',
+      content: `
+        <div class="w-56 pt-1 pr-1 pl-1 break-words whitespace-normal">
+          <p class="text-sm font-bold text-white pb-1">This project is locked</p>
+          <p class="text-xs leading-4 text-white pb-1">Upgrade your plan or contact support to unlock it</p>
+        </div>`,
+      allowHTML: true,
+    });
+
+    tippy('.tooltip-project-archived', {
+      theme: 'indigo',
+      content: `
+        <div class="w-56 pt-1 pr-1 pl-1 break-words whitespace-normal">
+          <p class="text-sm font-bold text-white pb-1">This project is archived</p>
+          <p class="text-xs leading-4 text-white pb-1">Unarchive project for disable read only mode</p>
+        </div>`,
+      allowHTML: true,
+    });
+  });
+
+function get_current_list_type(elem) {
+  return $(elem).closest('.common-page-header[current_list_type]').attr('current_list_type');
+}
+
+function openTab(elem) {
+  let new_val = (get_current_list_type(elem) == 'grid') ? 'table' : 'grid';
+  document.cookie = 'projects_list_type=' + new_val + '; path=/';
+  window.location.reload();
+}
+
+function run_search_project(elem) {
+  const value = $(elem).val().toLowerCase();
+  if (get_current_list_type(elem) == 'grid') {
+    $('li').filter(function () {
+      $(this).toggle(
+        $(this).find('h3').text().toLowerCase().indexOf(value) > -1
+      );
+    });
+  } else {
+    projectSearch(elem);
+  }
+  return false;
+}
+
+function projectSearch(elem) {
+  var input, filter, table, tr, td, cell, i, j;
+  input = $(elem)[0];
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  for (i = 1; i < tr.length; i++) {
+    tr[i].style.display = "none";
+
+    td = tr[i].getElementsByTagName("td");
+    for (var j = 0; j < td.length; j++) {
+      cell = tr[i].getElementsByTagName("td")[j];
+      if (cell) {
+        if (cell.innerHTML.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+          break;
+        }
+      }
+    }
+  }
+}
+</script>
+
+
+        </div>
+
+        
+        <script>
+  $(document).ready(() => {
+    /* Ghost notification */
+    const currentUser = '32877';
+  
+    if (currentUser) {
+      const lastSignInDate = new Date(`2025-12-17 11:36:33 UTC`);
+  
+      const apiKey = '103d6d6a761d5e4cb59bd08f8d';
+  
+      fetch(`https://changelog.testomat.io/ghost/api/v3/content/posts/?key=${apiKey}&fields=published_at&limit=1&order=published_at%20desc`)
+        .then(res => res.json())
+        .then(data => {
+          const lastPostDate = new Date(data.posts[0].published_at);
+  
+          if (lastSignInDate < lastPostDate) {
+            $('#ghost-status').show();
+          }
+      });
+    }
+  });
+</script>
+
+        <iframe src="/ember-monaco/frame.html" style="visibility: hidden; position: absolute; top: -1000px;"></iframe>
+
+
+      </div>
+  
+
+  <script>
+
+    function showGlobalSearchOnBtn(ev) {
+      const globalSearchDiv = $('.global-search');
+
+      globalSearchDiv.show();
+
+      const globalSearchDivInput = globalSearchDiv.find('input');
+      globalSearchDivInput.focus();
+    }
+
+    function initGlobalSearchHandlers() {
+      const globalSearchDiv = $('.global-search');
+
+      return {
+        hideGlobalSearch(e) {
+          // disable hiding after click on global search button
+          const globalSearchBtnId = '#showGlobalSearchBtn';
+          const isGlobalSearchBtnClick = e && ($(e.target).is(globalSearchBtnId) || $(e.target).parent().is(globalSearchBtnId) || $(e.target).parent().parent().is(globalSearchBtnId));
+
+          if (isGlobalSearchBtnClick) return;
+
+          globalSearchDiv.hide();
+        },
+        showGlobalSearch() {
+          if (globalSearchDiv.is(':visible')) {
+            return this.hideGlobalSearch();
+          }
+
+          globalSearchDiv.show();
+
+          const globalSearchDivInput = globalSearchDiv.find('input');
+          globalSearchDivInput.focus();
+        },
+      };
+    }
+
+    function showDropdownMenu(ev) {
+      if ([ev.target, ev.target.parentElement, ev.target.parentElement.parentElement].includes(document.querySelector('#toggle-profile-menu'))) {
+        const menu = document.querySelector('#profile-menu');
+        if (menu.classList.contains('hidden')) {
+          menu.classList.remove('hidden');
+        } else {
+          menu.classList.add('hidden');
+        }
+      }
+
+      if ([ev.target, ev.target.parentElement, ev.target.parentElement.parentElement].includes(document.querySelector('#analytics-dropdown-toggle'))) {
+        const menu = document.querySelector('#analytics-dropdown-menu');
+        if (menu.classList.contains('hidden')) {
+          menu.classList.remove('hidden');
+        } else {
+          menu.classList.add('hidden');
+        }
+      }
+    }
+
+    function hideDropdownMenu(ev) {
+      if ([ev.target, ev.target.parentElement, ev.target.parentElement.parentElement].includes(document.querySelector('#toggle-profile-menu')) ||
+        [ev.target, ev.target.parentElement, ev.target.parentElement.parentElement].includes(document.querySelector('#analytics-dropdown-toggle'))) {
+        return;
+      }
+      const profileMenu = document.querySelector('#profile-menu');
+      const analyticsMenu = document.querySelector('#analytics-dropdown-menu');
+      if (profileMenu && !profileMenu.classList.contains('hidden')) {
+        profileMenu.classList.add('hidden');
+      }
+      if (analyticsMenu && !analyticsMenu.classList.contains('hidden')) {
+        analyticsMenu.classList.add('hidden');
+      }
+    }
+  </script>
+  <script>
+    for(const list of document.querySelectorAll('.projectList')) {
+      const div = list.querySelector('div');
+      const h = div.querySelector('h6');
+      const more = list.querySelector('.more');
+      const k = parseInt(getComputedStyle(div).width) / 6;
+
+      if (k > div.outerText.length && !h) {
+        more.style.display = 'none';
+      }
+    }
+  </script>
+
+  <script src="/assets/application-24f923e4b69032ad2d5bee5f0d56fed6acd4ee8bcf351a243a7fdca5f70d1d1a.js"></script>
+
+<div class="crisp-client" aria-live="polite" translate="no" tabindex="-1" lang="en" dir="ltr" style="--crisp-color-theme-10: 240, 242, 245; --crisp-color-theme-20: 239, 245, 247; --crisp-color-theme-100: 200, 201, 250; --crisp-color-theme-200: 113, 115, 255; --crisp-color-theme-300: 112, 114, 255; --crisp-color-theme-400: 110, 112, 255; --crisp-color-theme-500: 100, 102, 241; --crisp-color-theme-600: 85, 86, 204; --crisp-color-theme-700: 75, 76, 180; --crisp-color-theme-800: 65, 66, 156; --crisp-color-theme-900: 50, 51, 120; --crisp-color-theme-reverse: 255, 255, 255; --crisp-customization-default-button-horizontal: 10px; --crisp-customization-default-button-vertical: 10px;"><div class="cc-1lkve"></div><div class="cc-yv368" id="crisp-chatbox" data-hidden="false" data-force-show="false" data-color-mode="light" data-availability="online" data-lock-maximized="false" data-website-logo="false" data-last-operator-face="false" data-ongoing-operator-face="false" data-availability-tooltip="false" data-hide-vacation="false" data-blocked="false" data-mobile-view="false" data-full-view="false" data-small-view="true" data-large-view="false" data-has-local-messages="false" data-was-availability-online="true" data-is-activity-ongoing="false" data-hide-on-away="false" data-hide-on-mobile="false" data-position-reverse="false"><div class="cc-1kr6o cc-cxjxh cc-jx6a3"><div class="cc-18ov6" data-maximized="false" data-is-failure="false" role="button" tabindex="0" aria-label="Open chat" data-pane-animate-entrance="false" data-pop="minimized:open"><span class="cc-1442g"><!--v-if--></span><span class="cc-1qbp0 cc-1o31k"><span class="cc-otlyh" data-id="chat_closed" data-is-ongoing="false" data-prefer-search="false"><span class="cc-11f3x cc-16kzz" data-partial-pending="false"><!--v-if--></span></span></span></div></div></div><div class="cc-yv368 cc-vx6i0"></div><div class="cc-yv368 cc-1tx1r"></div><div class="cc-yv368 cc-jcxto" data-color-mode="light"></div></div></body></html>
