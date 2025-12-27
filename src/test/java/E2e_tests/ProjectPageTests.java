@@ -25,10 +25,9 @@ public class ProjectPageTests extends BaseTestsClass {
     void openLoginAndAuthenticate() {
         // Clear cookies to start fresh
         clearBrowserCookies();
-        // Open login page explicitly
-        open(baseUrl ); // replace /login with your actual login URL
 
-        // Wait for form and login
+        open(baseUrl);
+
         $("#content-desktop #user_email")
                 .shouldBe(visible, Duration.ofSeconds(10))
                 .setValue(email);
