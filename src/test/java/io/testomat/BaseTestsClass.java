@@ -1,4 +1,4 @@
-package E2e_tests;
+package io.testomat;
 
 import io.github.cdimascio.dotenv.Dotenv;
 
