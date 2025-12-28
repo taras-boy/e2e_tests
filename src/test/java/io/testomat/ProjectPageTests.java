@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class ProjectPageTests extends BaseTestsClass {
+public class ProjectPageTests extends BaseTests {
 
     static Dotenv env = Dotenv.load();
     static String baseUrl = env.get("BASE_URL");
